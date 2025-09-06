@@ -57,7 +57,7 @@ const Skills = () => {
             className="w-full h-full flex justify-center items-center min-h-screen"
         >
             <div className="flex flex-col gap-8 md:gap-10 w-3/4">
-                {/* Frontend Stack */}
+                {/* stack frontend */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -85,7 +85,7 @@ const Skills = () => {
                     </div>
                 </motion.div>
 
-                {/* Backend Stack */}
+                {/* stack backend */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

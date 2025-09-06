@@ -14,7 +14,17 @@ body {
   /* border: 1px solid red; */
 }
 
-/* Allow scrolling on mobile devices */
+:root {
+  --black: #121212;
+  --black-transparent: rgba(18, 18, 18, 0.9);
+  --blue-dark: #050647;
+  --blue: #1c4eef;
+  --gray: #ececec;
+  --white: #ebebeb;
+  --pure-white: #fff;
+}
+
+/* consenti scorrimento sui dispositivi mobili */
 @media (max-width: 768px) {
   body {
     overflow: auto;
@@ -26,14 +36,14 @@ body {
   overflow: hidden;
 }
 
-/* Allow scrolling on mobile devices */
+/* consenti scorrimento sui dispositivi mobili */
 @media (max-width: 768px) {
   #root {
     overflow: auto;
   }
 }
 
-/* Custom scrollbar */
+/* scrollbar personalizzata */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -59,12 +69,12 @@ html {
 /* Selection colors */
 ::selection {
   background: rgba(59, 130, 246, 0.1);
-  color: #1e40af;
+  color: var(--blue);
 }
 
 ::-moz-selection {
   background: rgba(59, 130, 246, 0.1);
-  color: #1e40af;
+  color: var(--blue);
 }
 
 /* Focus styles */
@@ -76,6 +86,13 @@ html {
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+}
+
+/* Remove focus outline from navbar buttons */
+nav button:focus,
+nav button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Animation utilities */

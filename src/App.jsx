@@ -26,10 +26,10 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col md:flex-row bg-gray-50">
-      {/* Sidebar Navigation */}
+      {/* navigazione laterale */}
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
 
-      {/* Main Content */}
+      {/* contenuto principale */}
       <main className="flex-1 flex overflow-y-auto">
         <AnimatePresence mode="wait">
           {renderSection()}

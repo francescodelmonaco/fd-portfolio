@@ -13,7 +13,7 @@ const About = () => {
             className="w-full h-screen flex justify-center items-center"
         >
             <div className="flex flex-col w-3/4 text-center gap-7">
-                {/* Profile Photo */}
+                {/* foto profilo */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +29,7 @@ const About = () => {
                     </div>
                 </motion.div>
 
-                {/* Header */}
+                {/* intestazione */}
                 <motion.h1
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -47,7 +47,7 @@ const About = () => {
                     Jr Full Stack Web Developer
                 </motion.p>
 
-                {/* Social Links */}
+                {/* link social */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

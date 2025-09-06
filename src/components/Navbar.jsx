@@ -15,7 +15,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="h-full flex flex-col justify-center w-full md:w-1/4 relative"
-            style={{ backgroundColor: '#121212' }}
+            style={{ backgroundColor: 'var(--black)' }}
         >
             <div className="z-10 flex flex-col h-full justify-between">
                 {menuItems.map((item, index) => {

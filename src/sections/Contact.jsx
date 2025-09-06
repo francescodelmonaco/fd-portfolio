@@ -5,7 +5,7 @@ import cvFile from '../assets/cv-francesco-delmonaco.pdf';
 import emailjs from '@emailjs/browser';
 import Loader from '../components/Loader';
 
-// emailjs info
+// informazioni emailjs
 const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
@@ -68,13 +68,13 @@ const Contact = () => {
             className="w-full h-full flex flex-col justify-center items-center min-h-screen"
         >
             <div className="grid md:grid-cols-2 gap-16 w-3/4">
-                {/* Contact Info */}
+                {/* informazioni contatto */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                    <h3 className="text-2xl font-medium text-gray-800 mb-8">Parliamone</h3>
+                    <h3 className="text-2xl font-medium text-gray-800 mb-8">Restiamo in contatto...</h3>
                     <p className="text-gray-600 mb-8 leading-relaxed text-justify">
                         Sono sempre aperto a nuove opportunità e collaborazioni.
                         Non esitare a contattarmi per discutere di progetti interessanti
@@ -116,7 +116,7 @@ const Contact = () => {
                     </div>
                 </motion.div>
 
-                {/* Contact Form */}
+                {/* modulo di contatto */}
                 <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -188,9 +188,9 @@ const Contact = () => {
                             disabled={loading}
                             whileHover={{ scale: loading ? 1 : 1.02 }}
                             whileTap={{ scale: loading ? 1 : 0.98 }}
-                            className={`w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${loading
-                                    ? 'bg-gray-400 cursor-not-allowed'
-                                    : 'bg-gray-900 hover:bg-gray-800'
+                            className={`cursor-pointer w-full py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 ${loading
+                                ? 'bg-gray-400 cursor-not-allowed'
+                                : 'bg-gray-900 hover:bg-gray-800'
                                 } text-white`}
                         >
                             {loading ? (
@@ -209,7 +209,7 @@ const Contact = () => {
                 </motion.div>
             </div>
 
-            {/* Footer */}
+            {/* piè di pagina */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
