@@ -14,10 +14,10 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-full flex flex-col justify-center w-full md:w-1/4 relative"
+            className="h-full flex flex-col justify-center w-20 lg:w-1/4 relative"
             style={{ backgroundColor: 'var(--black)' }}
         >
-            <div className="z-10 flex flex-col h-full justify-between">
+            <div className="z-10 flex flex-col h-full justify-between lg:pl-10">
                 {menuItems.map((item, index) => {
                     const Icon = item.icon;
                     const isActive = activeSection === item.id;
@@ -33,11 +33,11 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                             animate={{ opacity: 1, x: 0 }}
                             style={{ transitionDelay: `${index * 0.1}s` }}
                         >
-                            <div className="flex items-center gap-3 md:gap-10 pl-10">
+                            <div className="flex items-center justify-center lg:justify-start w-full">
                                 <Icon
-                                    className={`w-15 h-15 ${isActive ? 'text-white' : 'text-gray-500'} group-hover:text-white transition-colors`}
+                                    className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-15 xl:h-15 ${isActive ? 'text-white' : 'text-gray-500'} group-hover:text-white transition-colors`}
                                 />
-                                <span className="text-lg md:text-2xl lg:text-3xl font-light tracking-[0.1em] md:tracking-[0.25em] leading-tight">
+                                <span className="hidden lg:block ml-4 lg:ml-6 xl:ml-10 text-lg lg:text-2xl xl:text-3xl font-light tracking-[0.15em] lg:tracking-[0.25em] leading-tight">
                                     {item.label}
                                 </span>
                             </div>

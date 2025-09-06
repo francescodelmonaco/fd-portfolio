@@ -67,13 +67,13 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center items-center"
+            className="flex justify-center py-8 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-8"
         >
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="grid grid-cols-3 gap-5 w-3/4"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3"
             >
                 {projects.map((project, index) => (
                     <motion.div
@@ -83,10 +83,10 @@ const Projects = () => {
                             y: -5,
                             transition: { duration: 0.3 }
                         }}
-                        className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 p-5"
+                        className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 p-4 sm:p-5"
                     >
-                        <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+                        <div className="flex justify-between items-center mb-2 sm:mb-3">
+                            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{project.title}</h3>
                             <span className="text-xs bg-gray-100 text-gray-600 rounded-full px-2 py-1">
                                 {project.type}
                             </span>
@@ -97,7 +97,7 @@ const Projects = () => {
                         </p>
 
                         <div className="mb-3">
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-2">
                                 {project.tech.map((tech) => (
                                     <span
                                         key={tech}
@@ -116,7 +116,7 @@ const Projects = () => {
                                 rel="noopener noreferrer"
                                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
                             >
-                                <Github size={16} />
+                                <Github className="w-4 h-4" />
                                 <span className="text-sm">GitHub</span>
                             </a>
                         </div>
