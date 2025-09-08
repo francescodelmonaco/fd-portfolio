@@ -46,38 +46,36 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-12"
+            className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center"
         >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-center">Progetti</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {projects.map((project, idx) => (
                     <motion.div
                         key={project.title}
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1, duration: 0.5 }}
-                        className="bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col justify-between"
+                        className="bg-(--white) rounded-lg shadow-lg p-6 flex flex-col justify-between"
                     >
-                        <div>
-                            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                            <p className="text-gray-400 mb-4">{project.description}</p>
+                        <div className='flex flex-col gap-2'>
+                            <h3 className="text-xl font-semibold">{project.title}</h3>
+                            <span className="text-gray-500 text-xs">{project.type}</span>
+                            <p className="text-gray-600 mb-4">{project.description}</p>
                         </div>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {project.tech.map((tech, i) => (
-                                <span key={i} className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs font-medium">
+                                <span key={i} className="bg-blue-900 text-gray-300 px-2 py-1 rounded-full text-xs font-medium">
                                     {tech}
                                 </span>
                             ))}
                         </div>
-                        <div className="flex items-center justify-between mt-auto">
-                            <span className="text-gray-500 text-xs">{project.type}</span>
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
-                                <Github className="inline-block w-5 h-5" />
-                            </a>
-                        </div>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="self-end text-blue-900 cursor-pointer hover:text-(--blue)">
+                            <Github className="inline-block w-5 h-5" />
+                        </a>
                     </motion.div>
-                ))}
-            </div>
-        </motion.div>
+                ))
+                }
+            </div >
+        </motion.div >
     );
 }
