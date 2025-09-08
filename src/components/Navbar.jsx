@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { User, Code, Briefcase, Mail } from 'lucide-react';
 
-const Navbar = ({ activeSection, setActiveSection }) => {
+export default function Navbar({ activeSection, setActiveSection }) {
     const menuItems = [
         { id: 'about', label: 'CHI SONO', icon: User },
         { id: 'skills', label: 'SKILLS', icon: Code },
@@ -49,4 +49,4 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     );
 };
 
-export default Navbar;
+

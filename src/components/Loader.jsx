@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const Loader = () => {
+export default function Loader() {
     return (
         <motion.div
             animate={{ rotate: 360 }}
@@ -8,6 +8,4 @@ const Loader = () => {
             className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
         />
     );
-};
-
-export default Loader;
+}

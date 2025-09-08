@@ -3,7 +3,7 @@ import { Github, Linkedin, FileText } from 'lucide-react';
 import fotoProfilo from '../assets/img/foto-profilo.png';
 import cvFile from '../assets/cv-francesco-delmonaco.pdf';
 
-const About = () => {
+export default function About() {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -86,4 +86,4 @@ const About = () => {
     );
 };
 
-export default About;
+

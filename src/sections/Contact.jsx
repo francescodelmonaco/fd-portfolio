@@ -7,50 +7,67 @@ import Loader from '../components/Loader';
 
 // informazioni emailjs
 const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
-const templateId = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID;
+const contactTemplateId = import.meta.env.VITE_EMAIL_JS_CONTACT_US_TEMPLATE_ID
+const autoReplyTemplateId = import.meta.env.VITE_EMAIL_JS_AUTO_REPLY_TEMPLATE_ID
 const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
 
 const year = new Date().getFullYear();
 
-const Contact = () => {
+export default function Contact() {
     const form = useRef();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        subject: '',
+        title: '',
         message: ''
     });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        if (name === 'title') {
-            setFormData(prev => ({
-                ...prev,
-                subject: value
-            }));
-        } else {
-            setFormData(prev => ({
-                ...prev,
-                [name]: value
-            }));
-        }
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
 
+        // Prima invia la mail "contact us" a te
         emailjs.sendForm(
             serviceId,
-            templateId,
+            contactTemplateId,
             form.current,
             publicKey
         )
             .then(() => {
-                alert('Messaggio inviato con successo!');
-                setFormData({ name: '', email: '', subject: '', message: '' });
-                setLoading(false);
+                // Poi invia la mail di auto-reply all'utente
+                emailjs.send(
+                    serviceId,
+                    autoReplyTemplateId,
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                        subject: formData.subject,
+                        title: formData.title,
+                        message: formData.message
+                    },
+                    publicKey
+                )
+                    .then(() => {
+                        alert('Messaggio inviato con successo!');
+                        setFormData({ name: '', email: '', subject: '', message: '' });
+                        setFormData({ name: '', email: '', title: '', message: '' });
+                        setFormData({ name: '', email: '', title: '', message: '' });
+                        setLoading(false);
+                    })
+                    .catch((error) => {
+                        alert('Errore nell\'invio della mail di risposta automatica.');
+                        console.error('EmailJS auto-reply error:', error);
+                        setLoading(false);
+                    });
             })
             .catch((error) => {
                 alert('Errore nell\'invio del messaggio. Riprova più tardi.');
@@ -154,14 +171,14 @@ const Contact = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                            <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
                                 Oggetto della email
                             </label>
                             <input
                                 type="text"
-                                id="subject"
+                                id="title"
                                 name="title"
-                                value={formData.subject}
+                                value={formData.title}
                                 onChange={handleInputChange}
                                 required
                                 className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
@@ -224,4 +241,3 @@ const Contact = () => {
     );
 };
 
-export default Contact;

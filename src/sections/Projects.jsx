@@ -39,93 +39,45 @@ const projects = [
     }
 ];
 
-const Projects = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6
-            }
-        }
-    };
-
+export default function Projects() {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center py-8 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-8"
+            className="w-full h-full flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-12"
         >
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3"
-            >
-                {projects.map((project, index) => (
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-center">Progetti</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                {projects.map((project, idx) => (
                     <motion.div
                         key={project.title}
-                        variants={itemVariants}
-                        whileHover={{
-                            y: -5,
-                            transition: { duration: 0.3 }
-                        }}
-                        className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 p-4 sm:p-5"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.1, duration: 0.5 }}
+                        className="bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col justify-between"
                     >
-                        <div className="flex justify-between items-center mb-2 sm:mb-3">
-                            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{project.title}</h3>
-                            <span className="text-xs bg-gray-100 text-gray-600 rounded-full px-2 py-1">
-                                {project.type}
-                            </span>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                            <p className="text-gray-400 mb-4">{project.description}</p>
                         </div>
-
-                        <p className="text-gray-600 mb-3 text-sm leading-relaxed">
-                            {project.description}
-                        </p>
-
-                        <div className="mb-3">
-                            <div className="flex flex-wrap gap-2">
-                                {project.tech.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            {project.tech.map((tech, i) => (
+                                <span key={i} className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs font-medium">
+                                    {tech}
+                                </span>
+                            ))}
                         </div>
-
-                        <div className="flex justify-end">
-                            <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
-                            >
-                                <Github className="w-4 h-4" />
-                                <span className="text-sm">GitHub</span>
+                        <div className="flex items-center justify-between mt-auto">
+                            <span className="text-gray-500 text-xs">{project.type}</span>
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+                                <Github className="inline-block w-5 h-5" />
                             </a>
                         </div>
-
                     </motion.div>
                 ))}
-            </motion.div>
+            </div>
         </motion.div>
     );
-};
-
-export default Projects;
+}

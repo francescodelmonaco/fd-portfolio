@@ -26,7 +26,7 @@ const backendSkills = [
     { name: 'Supabase', icon: supabaseIcon },
 ];
 
-const Skills = () => {
+export default function Skills() {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -117,4 +117,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+
