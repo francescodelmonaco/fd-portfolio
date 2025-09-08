@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import cvFile from '../assets/cv-francesco-delmonaco.pdf';
 import emailjs from '@emailjs/browser';
 import Loader from '../components/Loader';
+import Alert from '../components/Alert';
 
 // informazioni emailjs
 const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
@@ -22,6 +23,13 @@ export default function Contact() {
         title: '',
         message: ''
     });
+    const [showAlert, setShowAlert] = useState(false);
+
+    // Funzione per mostrare l'alert e chiuderlo dopo 5 secondi
+    const triggerAlert = () => {
+        setShowAlert(true);
+        setTimeout(() => setShowAlert(false), 5000);
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -57,21 +65,17 @@ export default function Contact() {
                     publicKey
                 )
                     .then(() => {
-                        alert('Messaggio inviato con successo!');
-                        setFormData({ name: '', email: '', subject: '', message: '' });
-                        setFormData({ name: '', email: '', title: '', message: '' });
+                        triggerAlert();
                         setFormData({ name: '', email: '', title: '', message: '' });
                         setLoading(false);
                     })
                     .catch((error) => {
-                        alert('Errore nell\'invio della mail di risposta automatica.');
-                        console.error('EmailJS auto-reply error:', error);
+                        // In caso di errore, puoi mostrare un alert diverso se vuoi
                         setLoading(false);
                     });
             })
             .catch((error) => {
-                alert('Errore nell\'invio del messaggio. Riprova più tardi.');
-                console.error('EmailJS error:', error);
+                // In caso di errore, puoi mostrare un alert diverso se vuoi
                 setLoading(false);
             });
     };
@@ -82,9 +86,11 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-8"
+            className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center"
         >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
+                {showAlert && <Alert onClose={() => setShowAlert(false)} />}
+
                 {/* informazioni contatto */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -95,7 +101,7 @@ export default function Contact() {
                     <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
                         Sono sempre aperto a nuove opportunità e collaborazioni.
                         Non esitare a contattarmi per discutere di progetti interessanti
-                        o semplicemente per fare una chiacchierata sul mondo dello sviluppo web.
+                        o semplicemente per fare una chiacchierata sul mondo dello sviluppo web!
                     </p>
 
                     <div className="space-y-4 sm:space-y-6">
@@ -239,5 +245,5 @@ export default function Contact() {
             </motion.div>
         </motion.div>
     );
-};
+}
 
