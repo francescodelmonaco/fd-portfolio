@@ -1,3 +1,4 @@
 Personal portfolio developed with:
-- ⚛️ React
+- ⚛️ React.js
 - 🎨 Tailwind CSS
+- 🎬 Framer Motion
