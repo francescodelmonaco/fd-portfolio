@@ -14,7 +14,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-full flex flex-col justify-center w-20 lg:w-1/4 relative"
+            className="h-11/12 self-center flex flex-col justify-center w-20 lg:w-1/4 relative rounded-r-4xl"
             style={{ backgroundColor: 'var(--black)' }}
         >
             <div className="z-10 flex flex-col h-full justify-between lg:pl-10">

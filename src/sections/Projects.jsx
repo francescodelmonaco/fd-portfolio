@@ -55,7 +55,7 @@ export default function Projects() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1, duration: 0.5 }}
-                        className="bg-(--white) rounded-lg shadow-lg p-6 flex flex-col justify-between"
+                        className="bg-(--pure-white) rounded-lg shadow-lg p-6 flex flex-col justify-between"
                     >
                         <div className='flex flex-col gap-2'>
                             <h3 className="text-xl font-semibold">{project.title}</h3>
