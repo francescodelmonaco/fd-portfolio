@@ -213,7 +213,7 @@ export default function Contact() {
                             whileTap={{ scale: loading ? 1 : 0.98 }}
                             className={`cursor-pointer w-full py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 text-sm sm:text-base ${loading
                                 ? 'bg-gray-400 cursor-not-allowed'
-                                : 'bg-gray-900 hover:bg-gray-800'
+                                : 'bg-blue-900 hover:bg-(--blue)'
                                 } text-white`}
                         >
                             {loading ? (
@@ -237,7 +237,7 @@ export default function Contact() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.6 }}
-                className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-center w-full"
+                className="m-12 sm:m-16 p-6 sm:p-8 border-t border-gray-200 text-center w-9/12"
             >
                 <p className="text-gray-500 text-xs sm:text-sm">
                     © {year} Francesco Delmonaco. Tutti i diritti riservati.

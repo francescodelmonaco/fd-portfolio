@@ -5,7 +5,7 @@ const projects = [
     {
         title: 'Travel Journal',
         description: 'Applicazione full-stack per la gestione di un diario di viaggio con autenticazione utenti e database.',
-        tech: ['React', 'Node.js', 'Supabase', 'Tailwind'],
+        tech: ['React', 'Node.js', 'Supabase'],
         github: 'https://github.com/francescodelmonaco/travel-journal-app',
         type: 'Frontend + Backend'
     },
@@ -58,20 +58,23 @@ export default function Projects() {
                         className="bg-(--pure-white) rounded-lg shadow-lg p-6 flex flex-col justify-between"
                     >
                         <div className='flex flex-col gap-2'>
-                            <h3 className="text-xl font-semibold">{project.title}</h3>
+                            <div className='flex justify-between gap-2'>
+                                <h3 className="text-xl font-semibold">{project.title}</h3>
+
+                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-900 cursor-pointer hover:text-(--blue)">
+                                    <Github className="inline-block w-5 h-5" />
+                                </a>
+                            </div>
                             <span className="text-gray-500 text-xs">{project.type}</span>
                             <p className="text-gray-600 mb-4">{project.description}</p>
                         </div>
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <div className='flex flex-wrap gap-2 align-middle'>
                             {project.tech.map((tech, i) => (
                                 <span key={i} className="bg-blue-900 text-gray-300 px-2 py-1 rounded-full text-xs font-medium">
                                     {tech}
                                 </span>
                             ))}
                         </div>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="self-end text-blue-900 cursor-pointer hover:text-(--blue)">
-                            <Github className="inline-block w-5 h-5" />
-                        </a>
                     </motion.div>
                 ))
                 }
