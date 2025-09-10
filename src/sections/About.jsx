@@ -20,10 +20,10 @@ export default function About() {
                     transition={{ delay: 0.1, duration: 0.6 }}
                     className="flex justify-center"
                 >
-                    <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden shadow-lg mx-auto">
+                    <div className="w-45 h-45 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden shadow-lg mx-auto">
                         <img
                             src={fotoProfilo}
-                            alt="Francesco Delmonaco"
+                            alt="Foto profilo"
                             className="w-full h-full object-cover"
                         />
                     </div>
@@ -34,7 +34,7 @@ export default function About() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
+                    className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
                 >
                     Francesco Delmonaco
                 </motion.h1>
