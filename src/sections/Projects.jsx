@@ -3,9 +3,16 @@ import { Github } from 'lucide-react';
 
 const projects = [
     {
+        title: 'Convenzioni Poliambulanza',
+        description: 'Progressive Web App pensata per rendere più semplice e immediata la ricerca delle attività convenzionate con l’Istituto Ospedaliero Poliambulanza di Brescia.',
+        tech: ['React', 'Tailwind', 'Supabase'],
+        github: 'https://github.com/francescodelmonaco/pa-conventions',
+        type: 'Frontend + Backend'
+    },
+    {
         title: 'Travel Journal',
         description: 'Applicazione full-stack per la gestione di un diario di viaggio con autenticazione utenti e database.',
-        tech: ['React', 'Node.js', 'Supabase'],
+        tech: ['React', 'Tailwind', 'Supabase'],
         github: 'https://github.com/francescodelmonaco/travel-journal-app',
         type: 'Frontend + Backend'
     },
@@ -24,13 +31,6 @@ const projects = [
         type: 'Frontend + Backend'
     },
     {
-        title: 'BooRoad',
-        description: 'Applicazione frontend per la prenotazione di viaggi con interfaccia utente intuitiva.',
-        tech: ['React', 'Bootstrap'],
-        github: 'https://github.com/francescodelmonaco/BooRoad',
-        type: 'Frontend'
-    },
-    {
         title: 'Task Manager',
         description: 'Applicazione React per la gestione di task e progetti con funzionalità di organizzazione.',
         tech: ['React', 'CSS'],
@@ -46,7 +46,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center"
+            className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center overflow-y-auto"
         >
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {projects.map((project, idx) => (
@@ -70,7 +70,7 @@ export default function Projects() {
                         </div>
                         <div className='flex flex-wrap gap-2 align-middle'>
                             {project.tech.map((tech, i) => (
-                                <span key={i} className="bg-blue-900 text-gray-300 px-2 py-1 rounded-full text-xs font-medium">
+                                <span key={i} className="bg-blue-900 text-white px-2 py-1 rounded-full text-xs font-medium">
                                     {tech}
                                 </span>
                             ))}

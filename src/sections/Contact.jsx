@@ -86,7 +86,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center"
+            className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center overflow-y-auto"
         >
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {showAlert && <Alert onClose={() => setShowAlert(false)} />}
@@ -237,7 +237,7 @@ export default function Contact() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.6 }}
-                className="m-12 sm:m-16 p-6 sm:p-8 border-t border-gray-200 text-center w-9/12"
+                className="mt-12 sm:mt-16 p-6 sm:p-8 border-t border-gray-200 text-center w-9/12"
             >
                 <p className="text-gray-500 text-xs sm:text-sm">
                     © {year} Francesco Delmonaco. Tutti i diritti riservati.

@@ -54,7 +54,7 @@ export default function Skills() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full flex justify-center items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-8"
+            className="w-full h-full flex justify-center items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-8 overflow-y-auto"
         >
             <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {/* stack frontend */}
