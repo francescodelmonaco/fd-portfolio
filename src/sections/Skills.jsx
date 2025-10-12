@@ -1,22 +1,29 @@
 import { motion } from 'framer-motion';
-import htmlIcon from '../assets/icons/html.svg';
-import cssIcon from '../assets/icons/css.svg';
+
+// frontend icons
+import javascriptIcon from '../assets/icons/javascript.svg';
+import typescriptIcon from '../assets/icons/typescript.svg';
+import reactIcon from '../assets/icons/react.svg';
+import nextIcon from '../assets/icons/next.svg';
 import bootstrapIcon from '../assets/icons/bootstrap.svg';
 import tailwindIcon from '../assets/icons/tailwind.svg';
-import javascriptIcon from '../assets/icons/javascript.svg';
-import reactIcon from '../assets/icons/react.svg';
+
+// backend icons
 import nodeIcon from '../assets/icons/node js.svg';
 import expressIcon from '../assets/icons/express.svg';
 import mysqlIcon from '../assets/icons/mysql.svg';
 import supabaseIcon from '../assets/icons/supabase.svg';
+import phpIcon from '../assets/icons/php.svg';
+import laravelIcon from '../assets/icons/laravel.svg';
+import postgresqlIcon from '../assets/icons/postgresql.svg';
 
 const frontendSkills = [
-    { name: 'HTML', icon: htmlIcon },
-    { name: 'CSS', icon: cssIcon },
+    { name: 'JavaScript', icon: javascriptIcon },
+    { name: 'TypeScript', icon: typescriptIcon },
+    { name: 'React', icon: reactIcon },
+    { name: 'Next.js', icon: nextIcon },
     { name: 'Bootstrap', icon: bootstrapIcon },
     { name: 'Tailwind CSS', icon: tailwindIcon },
-    { name: 'JavaScript', icon: javascriptIcon },
-    { name: 'React', icon: reactIcon },
 ];
 
 const backendSkills = [
@@ -24,6 +31,9 @@ const backendSkills = [
     { name: 'Express', icon: expressIcon },
     { name: 'MySQL', icon: mysqlIcon },
     { name: 'Supabase', icon: supabaseIcon },
+    { name: 'PHP', icon: phpIcon },
+    { name: 'Laravel', icon: laravelIcon },
+    { name: 'PostgreSQL', icon: postgresqlIcon },
 ];
 
 export default function Skills() {
