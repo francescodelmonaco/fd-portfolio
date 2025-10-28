@@ -24,6 +24,10 @@ export default function About() {
                         <img
                             src={fotoProfilo}
                             alt="Foto profilo"
+                            width="256"
+                            height="256"
+                            decoding="async"
+                            fetchpriority="high"
                             className="w-full h-full object-cover"
                         />
                     </div>

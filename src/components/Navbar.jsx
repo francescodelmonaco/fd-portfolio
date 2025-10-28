@@ -1,13 +1,7 @@
 import { motion } from 'framer-motion';
-import { User, Code, Briefcase, Mail } from 'lucide-react';
+import { menuItems } from '../lib/data';
 
 export default function Navbar({ activeSection, setActiveSection }) {
-    const menuItems = [
-        { id: 'about', label: 'CHI SONO', icon: User },
-        { id: 'skills', label: 'SKILLS', icon: Code },
-        { id: 'projects', label: 'PROGETTI', icon: Briefcase },
-        { id: 'contact', label: 'CONTATTI', icon: Mail },
-    ];
 
     return (
         <motion.nav

@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { Suspense, useState, lazy } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
-import About from './sections/About';
-import Skills from './sections/Skills';
-import Projects from './sections/Projects';
-import Contact from './sections/Contact';
+import Loader from './components/Loader';
+
+const About = lazy(() => import('./sections/About'));
+const Skills = lazy(() => import('./sections/Skills'));
+const Projects = lazy(() => import('./sections/Projects'));
+const Contact = lazy(() => import('./sections/Contact'));
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
@@ -31,9 +33,17 @@ function App() {
 
       {/* contenuto principale */}
       <main className="flex-1 flex overflow-y-auto">
-        <AnimatePresence mode="wait">
-          {renderSection()}
-        </AnimatePresence>
+        <Suspense
+          fallback={
+            <div className="w-full h-full flex items-center justify-center">
+              <Loader />
+            </div>
+          }
+        >
+          <AnimatePresence mode="wait">
+            {renderSection()}
+          </AnimatePresence>
+        </Suspense>
       </main>
     </div>
   );
