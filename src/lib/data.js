@@ -62,7 +62,7 @@ export const menuItems = [
     { id: 'about', label: 'CHI SONO', icon: User },
     { id: 'skills', label: 'SKILLS', icon: Code },
     { id: 'projects', label: 'PROGETTI', icon: Briefcase },
-    { id: 'contact', label: 'CONTATTI', icon: Mail },
+    { id: 'contacts', label: 'CONTATTI', icon: Mail },
 ];
 
 export const frontendSkills = [

@@ -14,7 +14,7 @@ const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
 
 const year = new Date().getFullYear();
 
-export default function Contact() {
+export default function Contacts() {
     const form = useRef();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -99,42 +99,37 @@ export default function Contact() {
                 >
                     <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-6 sm:mb-8">Restiamo in contatto...</h3>
                     <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
-                        Sono sempre aperto a nuove opportunità e collaborazioni.
-                        Non esitare a contattarmi per discutere di progetti interessanti
-                        o semplicemente per fare una chiacchierata sul mondo dello sviluppo web!
+                        Sono sempre aperto a nuove opportunità e collaborazioni. Non esitare a contattarmi per discutere di progetti interessanti oppure semplicemente per fare una chiacchierata sul mondo dello sviluppo web!
                     </p>
 
-                    <div className="space-y-4 sm:space-y-6">
+                    <div className="flex justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
                         <motion.a
                             href="https://github.com/francescodelmonaco"
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ x: 5 }}
-                            className="flex items-center space-x-3 sm:space-x-4 text-gray-600 hover:text-gray-900 transition-colors"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
                         >
-                            <Github className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <span className="text-sm sm:text-base">GitHub</span>
+                            <Github className="w-5 h-5 sm:w-8 sm:h-8" />
                         </motion.a>
 
                         <motion.a
                             href="https://www.linkedin.com/in/francescodelmonaco/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ x: 5 }}
-                            className="flex items-center space-x-3 sm:space-x-4 text-gray-600 hover:text-gray-900 transition-colors"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
                         >
-                            <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <span className="text-sm sm:text-base">LinkedIn</span>
+                            <Linkedin className="w-5 h-5 sm:w-8 sm:h-8" />
                         </motion.a>
 
                         <motion.a
                             href={cvFile}
                             download="cv-francesco-delmonaco.pdf"
-                            whileHover={{ x: 5 }}
-                            className="flex items-center space-x-3 sm:space-x-4 text-gray-600 hover:text-gray-900 transition-colors"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
                         >
-                            <FileText className="w-5 h-5 sm:w-6 sm:h-6" />
-                            <span className="text-sm sm:text-base">CV</span>
+                            <FileText className="w-5 h-5 sm:w-8 sm:h-8" />
                         </motion.a>
                     </div>
                 </motion.div>

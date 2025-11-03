@@ -6,7 +6,7 @@ import Loader from './components/Loader';
 const About = lazy(() => import('./sections/About'));
 const Skills = lazy(() => import('./sections/Skills'));
 const Projects = lazy(() => import('./sections/Projects'));
-const Contact = lazy(() => import('./sections/Contact'));
+const Contacts = lazy(() => import('./sections/Contacts'));
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
@@ -19,8 +19,8 @@ function App() {
         return <Skills key="skills" />;
       case 'projects':
         return <Projects key="projects" />;
-      case 'contact':
-        return <Contact key="contact" />;
+      case 'contacts':
+        return <Contacts key="contacts" />;
       default:
         return <About key="about" />;
     }

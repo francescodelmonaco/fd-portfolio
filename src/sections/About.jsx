@@ -27,7 +27,7 @@ export default function About() {
                             width="256"
                             height="256"
                             decoding="async"
-                            fetchpriority="high"
+                            fetchPriority="high"
                             className="w-full h-full object-cover"
                         />
                     </div>
@@ -58,7 +58,8 @@ export default function About() {
                     transition={{ delay: 0.6, duration: 0.6 }}
                     className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-15 pt-6 sm:pt-8 md:pt-10"
                 >
-                    <a
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href="https://github.com/francescodelmonaco"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -66,8 +67,9 @@ export default function About() {
                     >
                         <Github className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                         <span className="text-sm sm:text-base md:text-lg">GitHub</span>
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href="https://www.linkedin.com/in/francescodelmonaco/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -75,15 +77,16 @@ export default function About() {
                     >
                         <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                         <span className="text-sm sm:text-base md:text-lg">LinkedIn</span>
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href={cvFile}
                         download="cv-francesco-delmonaco.pdf"
                         className="flex items-center justify-center sm:justify-start text-gray-600 hover:text-gray-900 transition-colors gap-2 sm:gap-3"
                     >
                         <FileText className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                         <span className="text-sm sm:text-base md:text-lg">CV</span>
-                    </a>
+                    </motion.a>
                 </motion.div>
             </div>
         </motion.div >
