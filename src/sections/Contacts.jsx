@@ -91,49 +91,6 @@ export default function Contacts() {
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {showAlert && <Alert onClose={() => setShowAlert(false)} />}
 
-                {/* informazioni contatto */}
-                <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
-                >
-                    <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-6 sm:mb-8">Restiamo in contatto...</h3>
-                    <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
-                        Sono sempre aperto a nuove opportunità e collaborazioni. Non esitare a contattarmi per discutere di progetti interessanti oppure semplicemente per fare una chiacchierata sul mondo dello sviluppo web!
-                    </p>
-
-                    <div className="flex justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
-                        <motion.a
-                            href="https://github.com/francescodelmonaco"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.2 }}
-                            className="flex flex-col items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-                        >
-                            <Github className="w-5 h-5 sm:w-8 sm:h-8" />
-                        </motion.a>
-
-                        <motion.a
-                            href="https://www.linkedin.com/in/francescodelmonaco/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.2 }}
-                            className="flex flex-col items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-                        >
-                            <Linkedin className="w-5 h-5 sm:w-8 sm:h-8" />
-                        </motion.a>
-
-                        <motion.a
-                            href={cvFile}
-                            download="cv-francesco-delmonaco.pdf"
-                            whileHover={{ scale: 1.2 }}
-                            className="flex flex-col items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-                        >
-                            <FileText className="w-5 h-5 sm:w-8 sm:h-8" />
-                        </motion.a>
-                    </div>
-                </motion.div>
-
                 {/* modulo di contatto */}
                 <motion.div
                     initial={{ opacity: 0, x: 30 }}
@@ -142,7 +99,7 @@ export default function Contacts() {
                 >
                     <form ref={form} onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                         <div>
-                            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                            <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
                                 Nome e cognome
                             </label>
                             <input
@@ -152,12 +109,12 @@ export default function Contacts() {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
+                                className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-full text-sm sm:text-base"
                             />
                         </div>
 
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                            <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
                                 Email
                             </label>
                             <input
@@ -167,12 +124,12 @@ export default function Contacts() {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
+                                className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-full text-sm sm:text-base"
                             />
                         </div>
 
                         <div>
-                            <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
+                            <label htmlFor="title" className="block text-sm font-medium text-gray-400 mb-2">
                                 Oggetto della email
                             </label>
                             <input
@@ -182,12 +139,12 @@ export default function Contacts() {
                                 value={formData.title}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm sm:text-base"
+                                className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-full text-sm sm:text-base"
                             />
                         </div>
 
                         <div>
-                            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                            <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
                                 Messaggio
                             </label>
                             <textarea
@@ -197,18 +154,18 @@ export default function Contacts() {
                                 onChange={handleInputChange}
                                 rows={4}
                                 required
-                                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none text-sm sm:text-base"
+                                className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-3xl resize-none text-sm sm:text-base"
                             />
                         </div>
 
                         <motion.button
                             type="submit"
                             disabled={loading}
-                            whileHover={{ scale: loading ? 1 : 1.02 }}
-                            whileTap={{ scale: loading ? 1 : 0.98 }}
-                            className={`cursor-pointer w-full py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 text-sm sm:text-base ${loading
-                                ? 'bg-gray-400 cursor-not-allowed'
-                                : 'bg-blue-900 hover:bg-(--blue)'
+                            whileHover={{ scale: loading ? 1 : 1.01 }}
+                            whileTap={{ scale: loading ? 1 : 0.99 }}
+                            className={`cursor-pointer w-full py-2 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center space-x-2 text-sm sm:text-base ${loading
+                                ? 'bg-gray-500 cursor-not-allowed'
+                                : 'bg-gray-500 hover:bg-gray-600'
                                 } text-white`}
                         >
                             {loading ? (
@@ -225,6 +182,49 @@ export default function Contacts() {
                         </motion.button>
                     </form>
                 </motion.div>
+
+                {/* informazioni contatto */}
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                >
+                    <h3 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8">Restiamo in contatto...</h3>
+                    <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
+                        Sono sempre aperto a nuove opportunità e collaborazioni. Non esitare a contattarmi per discutere di progetti oppure semplicemente per fare una chiacchierata sul mondo della programmazione!
+                    </p>
+
+                    <div className="flex justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+                        <motion.a
+                            href="https://github.com/francescodelmonaco"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                            <Github className="w-5 h-5 sm:w-8 sm:h-8" />
+                        </motion.a>
+
+                        <motion.a
+                            href="https://www.linkedin.com/in/francescodelmonaco/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                            <Linkedin className="w-5 h-5 sm:w-8 sm:h-8" />
+                        </motion.a>
+
+                        <motion.a
+                            href={cvFile}
+                            download="cv-francesco-delmonaco.pdf"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                            <FileText className="w-5 h-5 sm:w-8 sm:h-8" />
+                        </motion.a>
+                    </div>
+                </motion.div>
             </div>
 
             {/* piè di pagina */}
@@ -232,9 +232,9 @@ export default function Contacts() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.6 }}
-                className="mt-12 sm:mt-16 p-6 sm:p-8 border-t border-gray-200 text-center w-9/12"
+                className="mt-12 sm:mt-16 p-6 sm:p-8 border-t border-gray-400 text-center w-9/12"
             >
-                <p className="text-gray-500 text-xs sm:text-sm">
+                <p className="text-gray-400 text-xs sm:text-sm">
                     © {year} Francesco Delmonaco. Tutti i diritti riservati.
                 </p>
             </motion.div>

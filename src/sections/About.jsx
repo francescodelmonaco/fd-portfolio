@@ -20,7 +20,7 @@ export default function About() {
                     transition={{ delay: 0.1, duration: 0.6 }}
                     className="flex justify-center"
                 >
-                    <div className="w-45 h-45 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden shadow-lg mx-auto">
+                    <div className="w-45 h-45 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden shadow-xl shadow-white/10 mx-auto">
                         <img
                             src={fotoProfilo}
                             alt="Foto profilo"
@@ -46,7 +46,7 @@ export default function About() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
-                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400"
                 >
                     Jr Full Stack Web Developer
                 </motion.p>
@@ -59,30 +59,30 @@ export default function About() {
                     className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-15 pt-6 sm:pt-8 md:pt-10"
                 >
                     <motion.a
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.1 }}
                         href="https://github.com/francescodelmonaco"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center sm:justify-start text-gray-600 hover:text-gray-900 transition-colors gap-2 sm:gap-3"
+                        className="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition-colors gap-2 sm:gap-3"
                     >
                         <Github className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                         <span className="text-sm sm:text-base md:text-lg">GitHub</span>
                     </motion.a>
                     <motion.a
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.1 }}
                         href="https://www.linkedin.com/in/francescodelmonaco/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center sm:justify-start text-gray-600 hover:text-gray-900 transition-colors gap-2 sm:gap-3"
+                        className="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition-colors gap-2 sm:gap-3"
                     >
                         <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                         <span className="text-sm sm:text-base md:text-lg">LinkedIn</span>
                     </motion.a>
                     <motion.a
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.1 }}
                         href={cvFile}
                         download="cv-francesco-delmonaco.pdf"
-                        className="flex items-center justify-center sm:justify-start text-gray-600 hover:text-gray-900 transition-colors gap-2 sm:gap-3"
+                        className="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition-colors gap-2 sm:gap-3"
                     >
                         <FileText className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                         <span className="text-sm sm:text-base md:text-lg">CV</span>

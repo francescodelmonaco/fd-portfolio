@@ -2,6 +2,7 @@ import { Suspense, useState, lazy } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Loader from './components/Loader';
+import Silk from './components/Silk';
 
 const About = lazy(() => import('./sections/About'));
 const Skills = lazy(() => import('./sections/Skills'));
@@ -27,25 +28,37 @@ function App() {
   };
 
   return (
-    <div className="h-screen flex flex-row bg-gray-50">
-      {/* navigazione laterale */}
-      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
+    <>
+      <div className="absolute inset-0 z-[-1]">
+        <Silk
+          speed={5}
+          scale={1}
+          color="#050647"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
 
-      {/* contenuto principale */}
-      <main className="flex-1 flex overflow-y-auto">
-        <Suspense
-          fallback={
-            <div className="w-full h-full flex items-center justify-center">
-              <Loader />
-            </div>
-          }
-        >
-          <AnimatePresence mode="wait">
-            {renderSection()}
-          </AnimatePresence>
-        </Suspense>
-      </main>
-    </div>
+      <div className="h-screen flex flex-row">
+        {/* navigazione laterale */}
+        <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
+
+        {/* contenuto principale */}
+        <main className="flex-1 flex overflow-y-auto">
+          <Suspense
+            fallback={
+              <div className="w-full h-full flex items-center justify-center">
+                <Loader />
+              </div>
+            }
+          >
+            <AnimatePresence mode="wait">
+              {renderSection()}
+            </AnimatePresence>
+          </Suspense>
+        </main>
+      </div>
+    </>
   );
 }
 

@@ -21,6 +21,20 @@ import postgresqlIcon from '../assets/icons/postgresql.svg';
 // Projects data
 export const projects = [
     {
+        title: 'Score Board',
+        description: 'PWA completa per la gestione di statistiche, giocatori e flussi di cassa di squadre sportive amatoriali.',
+        tech: ['Next.js', 'Tailwind', 'Supabase'],
+        link: 'https://score-board-gray.vercel.app/',
+        type: 'Frontend + Backend'
+    },
+    {
+        title: 'Pocket Garage',
+        description: 'Gestionale completo per il monitoraggio di veicoli: scadenze, manutenzioni, rifornimenti, assicurazioni e bolli.',
+        tech: ['Next.js', 'Tailwind', 'Supabase', 'Shadcn'],
+        link: 'https://pocket-garage.vercel.app/',
+        type: 'Frontend + Backend'
+    },
+    {
         title: 'Convenzioni Poliambulanza',
         description: 'PWA pensata per semplificare la ricerca delle attività convenzionate con l’Istituto Ospedaliero Poliambulanza di Brescia.',
         tech: ['React', 'Tailwind', 'Supabase'],
@@ -48,13 +62,6 @@ export const projects = [
         github: 'https://github.com/francescodelmonaco/kick-shop',
         type: 'Frontend + Backend'
     },
-    {
-        title: 'Task Manager',
-        description: 'Applicazione React per la gestione di task e progetti con funzionalità di organizzazione.',
-        tech: ['React', 'CSS'],
-        github: 'https://github.com/francescodelmonaco/ex-react-task-manager',
-        type: 'Frontend'
-    }
 ];
 
 // Navbar menu items
