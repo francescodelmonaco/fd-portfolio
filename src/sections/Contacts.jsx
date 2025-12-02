@@ -91,6 +91,49 @@ export default function Contacts() {
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {showAlert && <Alert onClose={() => setShowAlert(false)} />}
 
+                {/* informazioni contatto */}
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                >
+                    <h3 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8">Restiamo in contatto...</h3>
+                    <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
+                        Sono sempre aperto a nuove opportunità e collaborazioni. Non esitare a contattarmi per discutere di progetti oppure semplicemente per fare una chiacchierata sul mondo della programmazione!
+                    </p>
+
+                    <div className="flex justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+                        <motion.a
+                            href="https://github.com/francescodelmonaco"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                            <Github className="w-5 h-5 sm:w-8 sm:h-8" />
+                        </motion.a>
+
+                        <motion.a
+                            href="https://www.linkedin.com/in/francescodelmonaco/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                            <Linkedin className="w-5 h-5 sm:w-8 sm:h-8" />
+                        </motion.a>
+
+                        <motion.a
+                            href={cvFile}
+                            download="cv-francesco-delmonaco.pdf"
+                            whileHover={{ scale: 1.2 }}
+                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+                            <FileText className="w-5 h-5 sm:w-8 sm:h-8" />
+                        </motion.a>
+                    </div>
+                </motion.div>
+
                 {/* modulo di contatto */}
                 <motion.div
                     initial={{ opacity: 0, x: 30 }}
@@ -181,49 +224,6 @@ export default function Contacts() {
                             )}
                         </motion.button>
                     </form>
-                </motion.div>
-
-                {/* informazioni contatto */}
-                <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
-                >
-                    <h3 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8">Restiamo in contatto...</h3>
-                    <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
-                        Sono sempre aperto a nuove opportunità e collaborazioni. Non esitare a contattarmi per discutere di progetti oppure semplicemente per fare una chiacchierata sul mondo della programmazione!
-                    </p>
-
-                    <div className="flex justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
-                        <motion.a
-                            href="https://github.com/francescodelmonaco"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.2 }}
-                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                            <Github className="w-5 h-5 sm:w-8 sm:h-8" />
-                        </motion.a>
-
-                        <motion.a
-                            href="https://www.linkedin.com/in/francescodelmonaco/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.2 }}
-                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                            <Linkedin className="w-5 h-5 sm:w-8 sm:h-8" />
-                        </motion.a>
-
-                        <motion.a
-                            href={cvFile}
-                            download="cv-francesco-delmonaco.pdf"
-                            whileHover={{ scale: 1.2 }}
-                            className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                            <FileText className="w-5 h-5 sm:w-8 sm:h-8" />
-                        </motion.a>
-                    </div>
                 </motion.div>
             </div>
 

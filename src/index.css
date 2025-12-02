@@ -1,8 +1,5 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
-@import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 
 body {
@@ -84,7 +81,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {

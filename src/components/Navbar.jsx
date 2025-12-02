@@ -8,9 +8,9 @@ export default function Navbar({ activeSection, setActiveSection }) {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-[70%] self-center flex flex-col justify-center w-40 relative rounded-full mx-12 transparent-card"
+            className="h-[10%] lg:h-[70%] self-center flex justify-center w-[90%] lg:w-40 relative rounded-full mx-12 my-6 lg:my-0 transparent-card lg:py-12"
         >
-            <div className="z-10 flex flex-col h-full self-center justify-between py-12 relative">
+            <div className="z-10 flex lg:flex-col w-full h-full items-center self-center justify-between relative mx-2 lg:mx-0">
                 {menuItems.map((item, index) => {
                     const Icon = item.icon;
                     const isActive = activeSection === item.id;
@@ -19,7 +19,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
                         <motion.button
                             key={item.id}
                             onClick={() => setActiveSection(item.id)}
-                            className={`w-full group relative cursor-pointer ${isActive ? 'text-white' : 'text-gray-400'
+                            className={`w-auto group relative cursor-pointer ${isActive ? 'text-white' : 'text-gray-400'
                                 } hover:text-white transition-all duration-200`}
                             transition={{ duration: 0.1 }}
                             initial={{ opacity: 0, x: -20 }}

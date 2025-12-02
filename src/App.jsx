@@ -39,7 +39,7 @@ function App() {
         />
       </div>
 
-      <div className="h-screen flex flex-row">
+      <div className="h-screen flex flex-col-reverse lg:flex-row">
         {/* navigazione laterale */}
         <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
 

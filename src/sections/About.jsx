@@ -10,7 +10,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-screen flex justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 overflow-y-auto"
+            className="w-full h-full lg:h-screen flex justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 overflow-y-auto"
         >
             <div className="flex flex-col w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3 text-center gap-4 sm:gap-5 md:gap-6 lg:gap-7">
                 {/* foto profilo */}
