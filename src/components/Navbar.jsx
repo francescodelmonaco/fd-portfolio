@@ -8,9 +8,9 @@ export default function Navbar({ activeSection, setActiveSection }) {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-[10%] lg:h-[70%] self-center flex justify-center w-[90%] lg:w-40 relative rounded-full mx-12 my-6 lg:my-0 transparent-card lg:py-12"
+            className="h-[10%] lg:h-[70%] self-center flex justify-center w-[90%] lg:w-[7%] xl:w-[5%] relative rounded-full mx-12 my-6 lg:my-0 lg:py-12"
         >
-            <div className="z-10 flex lg:flex-col w-full h-full items-center self-center justify-between relative mx-2 lg:mx-0">
+            <div className="z-10 flex lg:flex-col w-full h-full items-center self-center justify-between relative mx-2 lg:mx-0 transparent-card rounded-full">
                 {menuItems.map((item, index) => {
                     const Icon = item.icon;
                     const isActive = activeSection === item.id;
@@ -29,7 +29,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
                             {isActive && (
                                 <motion.div
                                     layoutId="activeBackground"
-                                    className="absolute inset-0 bg-white/15 rounded-full"
+                                    className="absolute inset-0 bg-white/15 rounded-full m-2"
                                     transition={{
                                         type: "spring",
                                         stiffness: 380,
@@ -39,7 +39,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
                             )}
                             <div className="p-5 relative z-10">
                                 <Icon
-                                    className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-15 xl:h-15 ${isActive ? 'text-white' : 'text-gray-400'} group-hover:text-white transition-colors`}
+                                    className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 xl:w-12 xl:h-12 ${isActive ? 'text-white' : 'text-gray-400'} group-hover:text-white transition-colors`}
                                 />
                             </div>
                         </motion.button>
