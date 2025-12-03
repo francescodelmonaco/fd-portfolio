@@ -5,7 +5,7 @@ import cvFile from '../assets/cv-francesco-delmonaco.pdf';
 
 export default function About() {
     return (
-        <motion.div
+        <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -23,7 +23,7 @@ export default function About() {
                     <div className="w-45 h-45 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden shadow-xl shadow-white/10 mx-auto">
                         <img
                             src={fotoProfilo}
-                            alt="Foto profilo"
+                            alt="Francesco Delmonaco Foto Profilo"
                             width="256"
                             height="256"
                             decoding="async"
@@ -89,7 +89,7 @@ export default function About() {
                     </motion.a>
                 </motion.div>
             </div>
-        </motion.div >
+        </motion.section >
     );
 };
 

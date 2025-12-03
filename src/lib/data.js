@@ -18,6 +18,10 @@ import phpIcon from '../assets/icons/php.svg';
 import laravelIcon from '../assets/icons/laravel.svg';
 import postgresqlIcon from '../assets/icons/postgresql.svg';
 
+// screen images
+import scoreBoardScreen from '../assets/screen/score-board-screen.png';
+import pocketGarageScreen from '../assets/screen/pocket-garage-screen.png';
+
 // Projects data
 export const projects = [
     {
@@ -25,20 +29,22 @@ export const projects = [
         description: 'PWA completa per la gestione di statistiche, giocatori e flussi di cassa di squadre sportive amatoriali.',
         tech: ['Next.js', 'Tailwind', 'Supabase'],
         link: 'https://score-board-gray.vercel.app/',
-        type: 'Frontend + Backend'
+        type: 'Frontend + Backend',
+        screen: scoreBoardScreen
     },
     {
         title: 'Pocket Garage',
         description: 'Gestionale completo per il monitoraggio di veicoli: scadenze, manutenzioni, rifornimenti, assicurazioni e bolli.',
         tech: ['Next.js', 'Tailwind', 'Supabase', 'Shadcn'],
         link: 'https://pocket-garage.vercel.app/',
-        type: 'Frontend + Backend'
+        type: 'Frontend + Backend',
+        screen: pocketGarageScreen
     },
     {
         title: 'Convenzioni Poliambulanza',
         description: 'PWA pensata per semplificare la ricerca delle attività convenzionate con l’Istituto Ospedaliero Poliambulanza di Brescia.',
         tech: ['React', 'Tailwind', 'Supabase'],
-        github: 'https://github.com/francescodelmonaco/pa-conventions',
+        link: 'https://pa-conventions.vercel.app/',
         type: 'Frontend + Backend'
     },
     {

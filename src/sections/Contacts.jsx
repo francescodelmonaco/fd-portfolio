@@ -81,7 +81,7 @@ export default function Contacts() {
     };
 
     return (
-        <motion.div
+        <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -238,7 +238,7 @@ export default function Contacts() {
                     © {year} Francesco Delmonaco. Tutti i diritti riservati.
                 </p>
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 }
 
