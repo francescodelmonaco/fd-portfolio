@@ -153,6 +153,7 @@ export default function Contacts() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-full text-sm sm:text-base"
+                                placeholder='Mario Rossi'
                             />
                         </div>
 
@@ -168,6 +169,7 @@ export default function Contacts() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-full text-sm sm:text-base"
+                                placeholder='mario.rossi@gmail.com'
                             />
                         </div>
 
@@ -183,6 +185,7 @@ export default function Contacts() {
                                 onChange={handleInputChange}
                                 required
                                 className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-full text-sm sm:text-base"
+                                placeholder='Richiesta di collaborazione'
                             />
                         </div>
 
@@ -198,6 +201,7 @@ export default function Contacts() {
                                 rows={4}
                                 required
                                 className="w-full px-3 sm:px-4 py-2 sm:py-3 transparent-card rounded-3xl resize-none text-sm sm:text-base"
+                                placeholder='Scrivi il tuo messaggio...'
                             />
                         </div>
 
