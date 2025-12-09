@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { menuItems } from '../lib/data';
 
 export default function Navbar({ activeSection, setActiveSection }) {
-
     return (
         <motion.nav
             initial={{ x: -100, opacity: 0 }}

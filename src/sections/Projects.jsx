@@ -21,15 +21,15 @@ export default function Projects() {
                         className="transparent-card rounded-3xl p-6"
                     >
                         <div className='flex justify-between gap-4'>
-                            <figure className='w-1/3 hidden md:block'>
+                            {/* <figure className='w-1/3 hidden md:block'>
                                 <img
                                     className='rounded-2xl h-50 w-full object-cover'
                                     src={project.screen || "https://picsum.photos/400/400?grayscale"}
                                     alt="Anteprima del progetto"
                                 />
-                            </figure>
+                            </figure> */}
 
-                            <div className='flex flex-col justify-between w-full lg:w-2/3'>
+                            <div className='flex flex-col justify-between w-full'>
                                 <div className='flex flex-col gap-2'>
                                     <h3 className="text-xl font-semibold line-clamp-1">{project.title}</h3>
                                     <span className="text-gray-400 text-xs">{project.type}</span>
