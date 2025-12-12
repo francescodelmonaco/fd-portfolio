@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Loader from './components/Loader';
 import Silk from './components/Silk';
+import { Analytics } from '@vercel/analytics/react';
 
 const About = lazy(() => import('./sections/About'));
 const Skills = lazy(() => import('./sections/Skills'));
@@ -29,6 +30,10 @@ function App() {
 
   return (
     <>
+      {/* vercel analytics */}
+      <Analytics />
+
+      {/* wallpaper */}
       <div className="absolute inset-0 z-[-1]">
         <Silk
           speed={5}
