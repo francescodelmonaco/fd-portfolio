@@ -72,27 +72,82 @@ export const projects = [
 
 // Navbar menu items
 export const menuItems = [
-    { id: 'about', label: 'CHI SONO', icon: User },
-    { id: 'skills', label: 'SKILLS', icon: Code },
-    { id: 'projects', label: 'PROGETTI', icon: Briefcase },
-    { id: 'contacts', label: 'CONTATTI', icon: Mail },
+    {
+        id: 'about',
+        label: 'CHI SONO',
+        icon: User
+    },
+    {
+        id: 'skills',
+        label: 'SKILLS',
+        icon: Code
+    },
+    {
+        id: 'projects',
+        label: 'PROGETTI',
+        icon: Briefcase
+    },
+    {
+        id: 'contacts',
+        label: 'CONTATTI',
+        icon: Mail
+    },
 ];
 
 export const frontendSkills = [
-    { name: 'JavaScript', icon: javascriptIcon },
-    { name: 'TypeScript', icon: typescriptIcon },
-    { name: 'React', icon: reactIcon },
-    { name: 'Next.js', icon: nextIcon },
-    { name: 'Bootstrap', icon: bootstrapIcon },
-    { name: 'Tailwind CSS', icon: tailwindIcon },
+    {
+        name: 'JavaScript',
+        icon: javascriptIcon
+    },
+    {
+        name: 'TypeScript',
+        icon: typescriptIcon
+    },
+    {
+        name: 'React',
+        icon: reactIcon
+    },
+    {
+        name: 'Next.js',
+        icon: nextIcon
+    },
+    {
+        name: 'Bootstrap',
+        icon: bootstrapIcon
+    },
+    {
+        name: 'Tailwind CSS',
+        icon: tailwindIcon
+    },
 ];
 
 export const backendSkills = [
-    { name: 'Node.js', icon: nodeIcon },
-    { name: 'Express', icon: expressIcon },
-    { name: 'MySQL', icon: mysqlIcon },
-    { name: 'Supabase', icon: supabaseIcon },
-    { name: 'PHP', icon: phpIcon },
-    { name: 'Laravel', icon: laravelIcon },
-    { name: 'PostgreSQL', icon: postgresqlIcon },
+    {
+        name: 'Node.js',
+        icon: nodeIcon
+    },
+    {
+        name: 'Express',
+        icon: expressIcon
+    },
+    {
+        name: 'MySQL',
+        icon: mysqlIcon
+    },
+    {
+        name: 'Supabase',
+        icon: supabaseIcon
+    },
+    {
+        name: 'PHP',
+        icon: phpIcon
+    },
+    {
+        name: 'Laravel',
+        icon: laravelIcon
+    },
+    {
+        name: 'PostgreSQL',
+        icon: postgresqlIcon
+    },
 ];

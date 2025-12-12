@@ -46,13 +46,25 @@ export default function Projects() {
                                     </div>
 
                                     {project.github && (
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 cursor-pointer hover:text-(--gray)">
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-500 cursor-pointer hover:text-(--gray)"
+                                            title="Vai al repository GitHub"
+                                        >
                                             <Github className="inline-block w-5 h-5" />
                                         </a>
                                     )}
 
                                     {project.link && (
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 cursor-pointer hover:text-(--gray)">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-500 cursor-pointer hover:text-(--gray)"
+                                            title="Vai al sito web"
+                                        >
                                             <Globe className="inline-block w-5 h-5" />
                                         </a>
                                     )}

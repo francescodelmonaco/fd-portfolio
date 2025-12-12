@@ -7,7 +7,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-[7%] lg:h-[50%] w-[75%] md:w-[60%] lg:w-[7%] xl:w-[5%] self-center flex justify-center relative rounded-full mx-12 my-6 lg:my-0 lg:py-12"
+            className="h-15 lg:h-125 w-70 lg:w-20 self-center flex justify-center relative rounded-full mx-12 my-6 lg:my-0 lg:py-12"
         >
             <div className="z-10 flex lg:flex-col w-full h-full items-center self-center justify-between relative transparent-card rounded-full p-2">
                 {menuItems.map((item, index) => {
@@ -24,6 +24,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             style={{ transitionDelay: `${index * 0.1}s` }}
+                            title={item.label}
                         >
                             {isActive && (
                                 <motion.div
