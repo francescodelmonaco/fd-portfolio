@@ -9,7 +9,13 @@ export default function Navbar({ activeSection, setActiveSection }) {
             transition={{ duration: 0.5 }}
             className="h-15 lg:h-125 w-70 lg:w-20 self-center flex justify-center relative rounded-full mx-12 my-6 lg:my-0 lg:py-12"
         >
-            <div className="z-10 flex lg:flex-col w-full h-full items-center self-center justify-between relative transparent-card rounded-full p-2">
+            <div className="z-10 flex lg:flex-col w-full h-full items-center self-center justify-between relative  rounded-[50px] p-2 text-white/90 bg-black/20 backdrop-blur-sm"
+                style={{
+                    textShadow: 'rgba(0, 0, 0, 0.6) 0px 1px 2px, rgba(0, 0, 0, 0.2) 0px 0px 10px',
+                    boxShadow: 'color-mix(in oklch, white 35%, transparent) 0px 0px 2px 1px inset, color-mix(in oklch, white 15%, transparent) 0px 0px 10px 4px inset, rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 24px, rgba(17, 17, 26, 0.05) 0px 16px 56px, rgba(17, 17, 26, 0.05) 0px 4px 16px inset, rgba(17, 17, 26, 0.05) 0px 8px 24px inset, rgba(17, 17, 26, 0.05) 0px 16px 56px inset',
+                    backdropFilter: 'url("#glass-filter-«r25R1»") saturate(1)'
+                }}
+            >
                 {menuItems.map((item, index) => {
                     const Icon = item.icon;
                     const isActive = activeSection === item.id;
