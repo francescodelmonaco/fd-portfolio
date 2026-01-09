@@ -1,0 +1,22 @@
+# humanstxt.org/
+# Gli esseri umani dietro questo sito web
+
+/* TEAM */
+Developer: Francesco Delmonaco
+Location: Brescia, Lombardia, Italia
+Contact: https://www.francescodelmonaco.com
+GitHub: https://github.com/francescodelmonaco
+LinkedIn: https://www.linkedin.com/in/francescodelmonaco/
+
+/* SITE */
+Last update: 2026/01/09
+Language: Italiano
+Technologies: React, Vite, Tailwind CSS, Framer Motion
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React 19, Node.js
+IDE: Visual Studio Code
+
+/* GRAZIE A */
+- Comunità React
+- Tailwind CSS Team
+- Framer Motion

@@ -21,7 +21,7 @@ body {
   --gray: #ececec;
   --white: #ebebeb;
   --pure-white: #fff;
-  --transparent: rgba(255, 255, 255, 0.1);
+  --transparent: rgba(255, 255, 255, 0.025);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -75,7 +75,8 @@ body {
   }
 }
 
-/* scrollbar personalizzata */
+/*
+// scrollbar personalizzata
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -92,6 +93,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+*/
 
 /* Smooth scrolling */
 html {
@@ -100,12 +102,12 @@ html {
 
 /* Selection colors */
 ::selection {
-  background: var(--transparent);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--gray);
 }
 
 ::-moz-selection {
-  background: var(--transparent);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--gray);
 }
 
@@ -150,9 +152,11 @@ nav button:focus-visible {
 .transparent-card {
   background-color: var(--transparent);
   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.075);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.075);
+  text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px, rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  box-shadow: color-mix(in oklch, white 35%, transparent) 0px 0px 2px 1px inset, color-mix(in oklch, white 15%, transparent) 0px 0px 10px 4px inset, rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 24px, rgba(17, 17, 26, 0.05) 0px 16px 56px, rgba(17, 17, 26, 0.05) 0px 4px 16px inset, rgba(17, 17, 26, 0.05) 0px 8px 24px inset, rgba(17, 17, 26, 0.05) 0px 16px 56px inset;
+  backdrop-filter: url("#glass-filter-«r25R1»") saturate(1);
 }
 
 @theme inline {

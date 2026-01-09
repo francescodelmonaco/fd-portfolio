@@ -42,28 +42,28 @@ export const projects = [
     },
     {
         title: 'Convenzioni Poliambulanza',
-        description: 'PWA pensata per semplificare la ricerca delle attività convenzionate con l’Istituto Ospedaliero Poliambulanza di Brescia.',
+        description: 'PWA sviluppata per semplificare la ricerca delle attività convenzionate con l\'Istituto Ospedaliero Poliambulanza di Brescia. Applicazione web progressiva ottimizzata per mobile.',
         tech: ['React', 'Tailwind', 'Supabase'],
         link: 'https://pa-conventions.vercel.app/',
         type: 'Frontend + Backend'
     },
-    {
+    /* {
         title: 'Travel Journal',
         description: 'Applicazione full-stack per la gestione di un diario di viaggio con autenticazione utenti e database.',
         tech: ['React', 'Tailwind', 'Supabase'],
         github: 'https://github.com/francescodelmonaco/travel-journal-app',
         type: 'Frontend + Backend'
-    },
-    {
+    }, */
+    /* {
         title: 'VinylMatch',
         description: 'Piattaforma frontend per la ricerca e il matching di vinili musicali con interfaccia moderna.',
         tech: ['React', 'Bootstrap'],
         github: 'https://github.com/francescodelmonaco/progetto-finale-spec-frontend-front',
         type: 'Frontend'
-    },
+    }, */
     {
         title: 'Kick Shop',
-        description: 'E-commerce completo per la vendita di scarpe con gestione carrello e sistema di pagamento.',
+        description: 'E-commerce completo per la vendita di prodotti calcistici con gestione carrello/preferiti, visualizzazione in griglia o lista e sistema di pagamento.',
         tech: ['React', 'Node.js', 'Express', 'MySQL'],
         github: 'https://github.com/francescodelmonaco/kick-shop',
         type: 'Frontend + Backend'
@@ -96,14 +96,6 @@ export const menuItems = [
 
 export const frontendSkills = [
     {
-        name: 'JavaScript',
-        icon: javascriptIcon
-    },
-    {
-        name: 'TypeScript',
-        icon: typescriptIcon
-    },
-    {
         name: 'React',
         icon: reactIcon
     },
@@ -112,8 +104,12 @@ export const frontendSkills = [
         icon: nextIcon
     },
     {
-        name: 'Bootstrap',
-        icon: bootstrapIcon
+        name: 'JavaScript',
+        icon: javascriptIcon
+    },
+    {
+        name: 'TypeScript',
+        icon: typescriptIcon
     },
     {
         name: 'Tailwind CSS',
@@ -135,9 +131,14 @@ export const backendSkills = [
         icon: mysqlIcon
     },
     {
+        name: 'PostgreSQL',
+        icon: postgresqlIcon
+    },
+    {
         name: 'Supabase',
         icon: supabaseIcon
     },
+    /*
     {
         name: 'PHP',
         icon: phpIcon
@@ -146,8 +147,5 @@ export const backendSkills = [
         name: 'Laravel',
         icon: laravelIcon
     },
-    {
-        name: 'PostgreSQL',
-        icon: postgresqlIcon
-    },
+    */
 ];

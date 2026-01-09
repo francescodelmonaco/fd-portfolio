@@ -23,7 +23,7 @@ export default function About() {
                     <div className="w-45 h-45 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden shadow-xl shadow-white/10 mx-auto">
                         <img
                             src={fotoProfilo}
-                            alt="Francesco Delmonaco Foto Profilo"
+                            alt="Foto profilo di Francesco Delmonaco"
                             width="256"
                             height="256"
                             decoding="async"
@@ -48,7 +48,7 @@ export default function About() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400"
                 >
-                    Jr Full Stack Web Developer
+                    Full Stack Web Developer · Brescia
                 </motion.p>
 
                 {/* link social */}
@@ -63,6 +63,7 @@ export default function About() {
                         href="https://github.com/francescodelmonaco"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Profilo GitHub di Francesco Delmonaco"
                         className="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition-colors gap-2 sm:gap-3"
                     >
                         <Github className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
@@ -73,6 +74,7 @@ export default function About() {
                         href="https://www.linkedin.com/in/francescodelmonaco/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Profilo LinkedIn di Francesco Delmonaco"
                         className="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition-colors gap-2 sm:gap-3"
                     >
                         <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
@@ -82,6 +84,7 @@ export default function About() {
                         whileHover={{ scale: 1.1 }}
                         href={cvFile}
                         download="cv-francesco-delmonaco.pdf"
+                        aria-label="Scarica CV di Francesco Delmonaco"
                         className="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition-colors gap-2 sm:gap-3"
                     >
                         <FileText className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />

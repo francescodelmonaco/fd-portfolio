@@ -49,7 +49,7 @@ function App() {
         <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
 
         {/* contenuto principale */}
-        <main className="flex-1 flex overflow-y-auto">
+        <main className="flex-1 flex overflow-y-auto" role="main" aria-label="Contenuto principale">
           <Suspense
             fallback={
               <div className="w-full h-full flex items-center justify-center">

@@ -50,6 +50,7 @@ export default function Projects() {
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            aria-label={`Repository GitHub del progetto ${project.title}`}
                                             className="text-gray-500 cursor-pointer hover:text-(--gray)"
                                             title="Vai al repository GitHub"
                                         >
@@ -62,6 +63,7 @@ export default function Projects() {
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            aria-label={`Demo live del progetto ${project.title}`}
                                             className="text-gray-500 cursor-pointer hover:text-(--gray)"
                                             title="Vai al sito web"
                                         >

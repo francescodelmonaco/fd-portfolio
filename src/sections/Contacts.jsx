@@ -88,7 +88,7 @@ export default function Contacts() {
             transition={{ duration: 0.5 }}
             className="w-full min-h-screen flex flex-col items-center p-4 sm:p-6 md:p-8 lg:p-8 lg:justify-center overflow-y-auto"
         >
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 md:gap-16 w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3">
                 {showAlert && <Alert onClose={() => setShowAlert(false)} />}
 
                 {/* informazioni contatto */}
@@ -97,16 +97,17 @@ export default function Contacts() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                    <h3 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8">Restiamo in contatto...</h3>
-                    <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-justify text-sm sm:text-base">
-                        Sono sempre aperto a nuove opportunità e collaborazioni. Non esitare a contattarmi per discutere di progetti oppure semplicemente per fare una chiacchierata sul mondo della programmazione!
+                    <h2 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8">Restiamo in contatto...</h2>
+                    <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
+                        Sono sempre aperto a nuove opportunità e collaborazioni. Contattami per discutere di progetti di sviluppo web a Brescia e in Lombardia, o semplicemente per fare una chiacchierata sul mondo della programmazione!
                     </p>
 
-                    <div className="flex justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+                    <div className="flex sm:justify-start justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
                         <motion.a
                             href="https://github.com/francescodelmonaco"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Profilo GitHub di Francesco Delmonaco"
                             whileHover={{ scale: 1.2 }}
                             className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
@@ -117,6 +118,7 @@ export default function Contacts() {
                             href="https://www.linkedin.com/in/francescodelmonaco/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Profilo LinkedIn di Francesco Delmonaco"
                             whileHover={{ scale: 1.2 }}
                             className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
@@ -126,6 +128,7 @@ export default function Contacts() {
                         <motion.a
                             href={cvFile}
                             download="cv-francesco-delmonaco.pdf"
+                            aria-label="Scarica CV di Francesco Delmonaco"
                             whileHover={{ scale: 1.2 }}
                             className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
