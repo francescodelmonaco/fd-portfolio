@@ -48,7 +48,7 @@ export default function About() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400"
                 >
-                    Full Stack Web Developer · Brescia
+                    Sviluppatore Web Full Stack · Brescia
                 </motion.p>
 
                 {/* link social */}
